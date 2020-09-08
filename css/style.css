@@ -9,12 +9,12 @@
 }
 
 .green-bar{
-  height: 10%;
+  height: 13%;
   background-color: #009688;
 }
 
 .grey-bar{
-  height: 90%;
+  height: 87%;
   background-color: #dbdbd2;
 }
 
@@ -25,11 +25,54 @@
 
 main{
   position: absolute;
+  display: flex;
   z-index: 1;
   background-color: white;
+  -webkit-box-shadow: 0px 3px 10px -1px rgba(0,0,0,0.31);
+  -moz-box-shadow: 0px 3px 10px -1px rgba(0,0,0,0.31);
+  box-shadow: 0px 3px 10px -1px rgba(0,0,0,0.31);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
   height: calc(100% - 5%);
+}
+
+.left-div{
+  width: 35%;
+  background-color: red;
+  height: 100%
+}
+.right-div{
+  width: 65%;
+  background-color: lightblue;
+  height: 100%
+}
+
+
+header{
+  background-color: #eaeaea;
+  height: 60px;
+  width: 100%;
+}
+
+#notifiche{
+  background-color: #8edafc;
+  height: 90px;
+  width: 100%;
+}
+
+#search{
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background-color: #eaeaea;
+}
+
+.ricerca{
+  margin: auto;
+  background-color: white;
+  width: 90%;
+  height: 35px;
+  border-radius: 100px;
 }
