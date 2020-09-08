@@ -95,3 +95,17 @@ header{
   height: 90px;
   background-color: lightblue;
 }
+
+.container-chat{
+  width: 100%;
+  height: calc(100% - 160px);
+  overflow-y: auto;
+  background-image: url(../img/mine.jpg);
+}
+
+#user-input{
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #eaeaea;
+}
