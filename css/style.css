@@ -2,15 +2,37 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 ul{
   list-style: none;
 }
 
+h2{
+  font-size: 20px;
+  font-weight: 400;
+  color: #444;
+
+}
+
+h3{
+  font-weight: 400;
+  color: #444;
+}
+
+p{
+  font-weight: 200;
+  font-size: 14px;
+  color: #888;
+}
+
 .page-wrapper{
   height: 100vh;
 }
+
+/* Background */
 
 .green-bar{
   height: 13%;
@@ -26,6 +48,8 @@ ul{
   position: relative;
   height: 100vh;
 }
+
+/* Struttura */
 
 main{
   position: absolute;
@@ -46,7 +70,7 @@ main{
   width: 35%;
   background-color: red;
   height: 100%;
-  border-right: 1px solid #d6d6d6;
+  border-right: 1px solid #e9ebeb;
 }
 .right-div{
   width: 65%;
@@ -55,46 +79,134 @@ main{
 }
 
 
-header{
+/* Testata */
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
   background-color: #eaeaea;
   height: 60px;
   width: 100%;
 }
 
-#notifiche{
-  background-color: #8edafc;
-  height: 110px;
-  width: 100%;
+
+.header img{
+  max-height: 45px;
 }
+
+.avatar-main{
+  overflow: hidden;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+
+
+.header i{
+  color: #b1b1b1;
+  font-size: 18px;
+  margin-left: 15px;
+}
+
+/* Notifiche */
+
+#notifiche{
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #8edafc;
+  height: 95px;
+  width: 100%;
+  color: #444;
+}
+
+.circle{
+  display: flex;
+  overflow: hidden;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.circle i{
+  margin: auto;
+  font-size: 22px;
+  color: #8edafc;
+}
+
+.notifiche-text{
+  margin-left: 15px;
+}
+
+.notifiche-text p{
+  color: black;
+}
+
+/* Barra ricerca */
 
 #search{
   display: flex;
-  height: 65px;
+  height: 60px;
   width: 100%;
   background-color: #eaeaea;
-  border-bottom: 1px solid #d6d6d6;
+  border-bottom: 1px solid #e9ebeb;
 }
 
 .ricerca{
   margin: auto;
   background-color: white;
   width: 95%;
-  height: 45px;
+  height: 40px;
   border-radius: 100px;
 }
 
+.search-icon{
+  width: 55px;
+  text-align: center;
+  line-height: 40px;
+  color: #b1b1b1;
+}
+
+
+/* Rubrica */
 
 .rubrica{
   overflow-y: auto;
   background-color: white;
-  height: calc(100% - 235px );
+  height: calc(100% - 215px );
 }
 
 .contatto{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 90px;
-  background-color: lightblue;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #e9ebeb;
 }
+
+.contatto img{
+  max-height: 55px;
+}
+
+.time{
+  align-self: flex-start;
+  color: #888;
+  font-weight: 300;
+}
+
+.contact-active{
+  display: flex;
+  align-items: center;
+}
+
+
+/* Chat */
 
 .container-chat{
   width: 100%;
@@ -104,6 +216,9 @@ header{
 
 }
 
+.contact-name{
+  margin-left: 15px;
+}
 
 #user-input{
   bottom: 0;
