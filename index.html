@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <title>Boolzapp</title>
 </head>
 <body>
@@ -175,7 +177,7 @@
           <div class="avatar-main">
             <img src="img/avatar_2.jpg" alt="avatar contatto" class="main-avatar">
           </div>
-          <div class="contact-name">
+          <div class="contact-name pad">
             <h2>Paolo Baccolo</h2>
             <p>Online</p>
           </div>
@@ -187,14 +189,25 @@
 
       </div>
       <div class="container-chat">
-        <ul>
-          <li class="container-log-user">
-            <div class="user-log">ciao</div>
+        <ul class="chat">
+          <li class="container-log user">
+            <div class="log">
+              <div class="log-text">ciao</div>
+            </div>
+          </li>
+          <li class="container-log">
+            <div class="log">
+              <div class="log-text">ciao</div>
+            </div>
           </li>
         </ul>
 
       </div>
       <div id="user-input">
+        <i class="far fa-laugh"></i>
+        <i class="fas fa-paperclip"></i>
+        <input id="input-text" type="text" name="chat" placeholder="Scrivi un messaggio">
+        <i class="send-message fas fa-paper-plane"></i>
 
       </div>
     </div>
@@ -204,7 +217,19 @@
 
 </div>
 
+<!-- Template messaggio -->
 
+<div class="template">
+
+  <li class="container-log">
+    <div class="log">
+      <div class="log-text"></div>
+    </div>
+  </li>
+
+</div>
+
+<!-- //Template messaggio -->
 
 <script src="js/main.js" charset="utf-8"></script>
 </body>
