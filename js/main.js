@@ -1,5 +1,15 @@
+var franco = null;
+
 $(document).ready(function(){
 
+
+
+$("#ricerca-contatti").keydown(
+  function(event){
+    var ricerca = $("#ricerca-contatti").val();
+    search(ricerca);
+  }
+)
 
  $(".send-message").click(
    function(){
@@ -32,7 +42,7 @@ function pcMessage(){
 
 function sendMessage(){
 
-
+  clearTimeout(franco);
   var inputText = $("#input-text").val();
 
   if(inputText != ""){
@@ -45,5 +55,20 @@ function sendMessage(){
     $("#input-text").val("");
   }
 
-setTimeout(function(){pcMessage()}, 3000);
+  franco = setTimeout(function(){pcMessage()}, 3000);
+}
+
+// Funzione ricerca
+
+function search(str) {
+  $(".contatto").each(function() {
+
+    if(!$(this).find("h2").text().includes(str)){
+      $(this).hide();
+    } else {
+      $(this).show();
+    }
+
+  });
+
 }
