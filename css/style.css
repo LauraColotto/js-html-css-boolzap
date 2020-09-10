@@ -178,6 +178,7 @@ main{
 
 #ricerca-contatti{
 border: none;
+width: 100%;
 }
 
 /* Rubrica */
@@ -209,7 +210,7 @@ border: none;
   font-weight: 300;
 }
 
-.contact-active{
+.contact-box{
   display: flex;
   align-items: center;
 }
@@ -219,7 +220,11 @@ border: none;
 
 /* Chat */
 
+
+
+
 .container-chat{
+  display: none;
   width: 100%;
   height: calc(100% - 140px);
   overflow-y: auto;
@@ -227,6 +232,10 @@ border: none;
   padding: 50px 90px;
   color: #444;
 
+}
+
+.container-chat.active{
+  display: block;
 }
 
 .contact-name{

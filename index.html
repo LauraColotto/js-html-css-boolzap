@@ -36,6 +36,8 @@
           <i class="fas fa-ellipsis-v"></i>
         </div>
       </div>
+
+      <!-- Notifiche -->
       <div id="notifiche">
         <div class="circle"><i class="fas fa-bell-slash"></i></div>
         <div class="notifiche-text">
@@ -43,7 +45,7 @@
           <p>Attiva notifiche desktop <i class="fas fa-chevron-right"></i></p>
         </div>
 
-
+      <!-- Ricerca -->
       </div>
       <div id="search">
         <div class="ricerca">
@@ -52,12 +54,14 @@
           </div>
           <input type="text" name="" id="ricerca-contatti">
         </div>
-
       </div>
+
+      <!-- Rubrica -->
+
       <div class="rubrica">
         <ul>
-          <li class="contatto">
-            <div class="contact-active">
+          <li class="contatto" data-contatto="0">
+            <div class="contact-box">
               <div class="circle">
                 <img src="img/avatar_2.jpg" alt="">
               </div>
@@ -68,8 +72,8 @@
             </div>
             <div class="time">17:30</div>
           </li>
-          <li class="contatto">
-            <div class="contact-active">
+          <li class="contatto" data-contatto="1">
+            <div class="contact-box">
               <div class="circle">
                 <img src="img/avatar_3.jpg" alt="">
               </div>
@@ -80,8 +84,8 @@
             </div>
             <div class="time">17:30</div>
           </li>
-          <li class="contatto">
-            <div class="contact-active">
+          <li class="contatto" data-contatto="2">
+            <div class="contact-box">
               <div class="circle">
                 <img src="img/avatar_4.jpg" alt="">
               </div>
@@ -92,8 +96,8 @@
             </div>
             <div class="time">17:30</div>
           </li>
-          <li class="contatto">
-            <div class="contact-active">
+          <li class="contatto" data-contatto="3">
+            <div class="contact-box">
               <div class="circle">
                 <img src="img/avatar_5.jpg" alt="">
               </div>
@@ -104,8 +108,8 @@
             </div>
             <div class="time">17:30</div>
           </li>
-          <li class="contatto">
-            <div class="contact-active">
+          <li class="contatto" data-contatto="4">
+            <div class="contact-box">
               <div class="circle">
                 <img src="img/avatar_6.jpg" alt="">
               </div>
@@ -116,8 +120,8 @@
             </div>
             <div class="time">17:30</div>
           </li>
-          <li class="contatto">
-            <div class="contact-active">
+          <li class="contatto" data-contatto="5">
+            <div class="contact-box">
               <div class="circle">
                 <img src="img/avatar_7.jpg" alt="">
               </div>
@@ -128,8 +132,8 @@
             </div>
             <div class="time">17:30</div>
           </li>
-          <li class="contatto">
-            <div class="contact-active">
+          <li class="contatto" data-contatto="6">
+            <div class="contact-box">
               <div class="circle">
                 <img src="img/avatar_8.jpg" alt="">
               </div>
@@ -140,8 +144,8 @@
             </div>
             <div class="time">17:30</div>
           </li>
-          <li class="contatto">
-            <div class="contact-active">
+          <li class="contatto" data-contatto="7">
+            <div class="contact-box">
               <div class="circle">
                 <img src="img/avatar_1.jpg" alt="">
               </div>
@@ -152,8 +156,8 @@
             </div>
             <div class="time">17:30</div>
           </li>
-          <li class="contatto">
-            <div class="contact-active">
+          <li class="contatto" data-contatto="8">
+            <div class="contact-box">
               <div class="circle">
                 <img src="img/avatar_2.jpg" alt="">
               </div>
@@ -173,7 +177,7 @@
     <!-- Colonna di destra -->
     <div class="right-div">
       <div class="header">
-        <div class="contact-active">
+        <div class="contact-box">
           <div class="avatar-main">
             <img src="img/avatar_2.jpg" alt="avatar contatto" class="main-avatar">
           </div>
@@ -188,7 +192,10 @@
         </div>
 
       </div>
-      <div class="container-chat">
+
+      <!-- Chat -->
+
+      <div class="container-chat active" data-chat="0">
         <ul class="chat">
           <li class="container-log user">
             <div class="log">
@@ -201,8 +208,123 @@
             </div>
           </li>
         </ul>
-
       </div>
+
+      <div class="container-chat" data-chat="1">
+        <ul class="chat">
+          <li class="container-log user">
+            <div class="log">
+              <div class="log-text">jjj</div>
+            </div>
+          </li>
+          <li class="container-log">
+            <div class="log">
+              <div class="log-text">yyyy</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container-chat" data-chat="2">
+        <ul class="chat">
+          <li class="container-log user">
+            <div class="log">
+              <div class="log-text">jjj</div>
+            </div>
+          </li>
+          <li class="container-log">
+            <div class="log">
+              <div class="log-text">yyyy</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container-chat" data-chat="3">
+        <ul class="chat">
+          <li class="container-log user">
+            <div class="log">
+              <div class="log-text">jjj</div>
+            </div>
+          </li>
+          <li class="container-log">
+            <div class="log">
+              <div class="log-text">yyyy</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container-chat" data-chat="4">
+        <ul class="chat">
+          <li class="container-log user">
+            <div class="log">
+              <div class="log-text">jjj</div>
+            </div>
+          </li>
+          <li class="container-log">
+            <div class="log">
+              <div class="log-text">yyyy</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container-chat" data-chat="5">
+        <ul class="chat">
+          <li class="container-log user">
+            <div class="log">
+              <div class="log-text">jjj</div>
+            </div>
+          </li>
+          <li class="container-log">
+            <div class="log">
+              <div class="log-text">yyyy</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container-chat" data-chat="6">
+        <ul class="chat">
+          <li class="container-log user">
+            <div class="log">
+              <div class="log-text">jjj</div>
+            </div>
+          </li>
+          <li class="container-log">
+            <div class="log">
+              <div class="log-text">yyyy</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container-chat" data-chat="7">
+        <ul class="chat">
+          <li class="container-log user">
+            <div class="log">
+              <div class="log-text">jjj</div>
+            </div>
+          </li>
+          <li class="container-log">
+            <div class="log">
+              <div class="log-text">yyyy</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container-chat" data-chat="8">
+        <ul class="chat">
+          <li class="container-log user">
+            <div class="log">
+              <div class="log-text">jjj</div>
+            </div>
+          </li>
+          <li class="container-log">
+            <div class="log">
+              <div class="log-text">yyyy</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Inserimento messaggio -->
+
       <div id="user-input">
         <i class="far fa-laugh"></i>
         <i class="fas fa-paperclip"></i>

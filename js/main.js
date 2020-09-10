@@ -1,29 +1,47 @@
 var franco = null;
 
+
+
 $(document).ready(function(){
 
+  // Ricerca rubrica
 
+  $("#ricerca-contatti").keyup(
+    function(event){
+      var ricerca = $(this).val().toLowerCase();
+      search(ricerca);
+    }
+  )
 
-$("#ricerca-contatti").keydown(
-  function(event){
-    var ricerca = $("#ricerca-contatti").val();
-    search(ricerca);
-  }
-)
+  // Invio da icona sendMessage
 
- $(".send-message").click(
-   function(){
-     sendMessage();
-   }
- );
-
- $("#input-text").keyup(
-   function(event) {
-     if (event.which == 13) {
+  $(".send-message").click(
+     function(){
        sendMessage();
      }
-   }
- )
+   );
+
+
+  // Invio da tastiera
+
+  $("#input-text").keyup(
+     function(event) {
+       if (event.which == 13) {
+         sendMessage();
+       }
+     }
+   )
+
+
+   // Selezione chat
+  $(".contatto").click(
+    function(){
+      var rubrica = $(this).data("contatto");
+      console.log(rubrica);
+
+      mostraChat(rubrica);
+    }
+  )
 
 
 });
@@ -34,7 +52,7 @@ $("#ricerca-contatti").keydown(
 function pcMessage(){
   var templateMessage = $(".template .container-log").clone();
   templateMessage.find(".log").text("Ammaccabanane");
-  $(".chat").append(templateMessage);
+  $(".active").append(templateMessage);
 }
 
 
@@ -51,7 +69,7 @@ function sendMessage(){
     templateMessage.find(".log").text(inputText);
     templateMessage.addClass("user");
 
-    $(".chat").append(templateMessage);
+    $(".active").append(templateMessage);
     $("#input-text").val("");
   }
 
@@ -61,14 +79,32 @@ function sendMessage(){
 // Funzione ricerca
 
 function search(str) {
+  console.log(str);
   $(".contatto").each(function() {
 
-    if(!$(this).find("h2").text().includes(str)){
-      $(this).hide();
-    } else {
+    if($(this).find("h2").text().toLowerCase().includes(str)){
       $(this).show();
+    } else {
+      $(this).hide();
     }
 
   });
+
+}
+
+
+// Mostra Chat
+
+function mostraChat(bl){
+  $(".container-chat").each(function(){
+
+    if ($(this).data("chat") == bl && !$(this).hasClass("active")) {
+      $(this).addClass("active");
+    } else if ($(this).hasClass("active")){
+      $(this).removeClass("active");
+    }
+  }
+
+  )
 
 }
