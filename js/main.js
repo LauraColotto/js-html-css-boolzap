@@ -55,7 +55,8 @@ $(document).ready(function(){
   });
 
   $(document).on("click", ".delete", function(){
-    $(this).parents("container-log").remove();
+    
+    $(this).parents(".container-log").remove();
   });
 
 });
