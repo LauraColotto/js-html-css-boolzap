@@ -38,23 +38,25 @@ $(document).ready(function(){
     function(){
       var rubrica = $(this).data("contatto");
       var pcName = $(this).find(".contact-name h2").text();
-      var avatar = $(this).find(".avatar-rubrica img").attr("src");
+      var avatar = $(this).find("img").attr("src");
+      console.log(avatar);
       console.log(rubrica);
       mostraChat(rubrica);
-      $(".pc-avatar img").attr("src", avatar);
+      $(".avatar-main img").attr("src", avatar);
       $(".pc-name h2").text(pcName);
     }
   )
 
 
-  // Elimina log
+//   // Elimina log
+
   $(document).on("click", ".freccetta", function() {
-    $(this).next(".option-box").toggle();
+    $(this).siblings(".option-box").toggle();
   });
 
   $(document).on("click", ".delete", function(){
     $(this).parents("container-log").remove();
-  })
+  });
 
 });
 
@@ -63,7 +65,7 @@ $(document).ready(function(){
 
 function pcMessage(){
   var templateMessage = $(".template .container-log").clone();
-  templateMessage.find(".log").text("Ammaccabanane");
+  templateMessage.find(".log-text").text("Ammaccabanane");
   $(".active").append(templateMessage);
 }
 
@@ -78,14 +80,14 @@ function sendMessage(){
   if(inputText != ""){
     var templateMessage = $(".template .container-log").clone();
 
-    templateMessage.find(".log").text(inputText);
+    templateMessage.find(".log-text").text(inputText);
     templateMessage.addClass("user");
 
     $(".active").append(templateMessage);
     $("#input-text").val("");
   }
 
-  franco = setTimeout(function(){pcMessage()}, 3000);
+  franco = setTimeout(function(){pcMessage()}, 1000);
 }
 
 
@@ -112,11 +114,12 @@ function search(str) {
 function mostraChat(bl){
   $(".container-chat").each(function(){
 
-    if ($(this).data("chat") == bl && !$(this).hasClass("active")) {
+    if ($(this).data("chat") == bl) {
       $(this).addClass("active");
     } else if ($(this).hasClass("active")){
       $(this).removeClass("active");
     }
   })
+
 
 }
