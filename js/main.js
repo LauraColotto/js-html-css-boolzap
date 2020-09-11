@@ -55,7 +55,7 @@ $(document).ready(function(){
   });
 
   $(document).on("click", ".delete", function(){
-    
+
     $(this).parents(".container-log").remove();
   });
 
@@ -68,6 +68,7 @@ function pcMessage(){
   var templateMessage = $(".template .container-log").clone();
   templateMessage.find(".log-text").text("Ammaccabanane");
   $(".active").append(templateMessage);
+  templateMessage.find(".text-time").text(oraAttuale());
 }
 
 
@@ -81,6 +82,8 @@ function sendMessage(){
   if(inputText != ""){
     var templateMessage = $(".template .container-log").clone();
 
+
+    templateMessage.find(".text-time").text(oraAttuale());
     templateMessage.find(".log-text").text(inputText);
     templateMessage.addClass("user");
 
@@ -91,6 +94,21 @@ function sendMessage(){
   franco = setTimeout(function(){pcMessage()}, 1000);
 }
 
+
+
+//Funzione Ora
+
+function oraAttuale(){
+  var date = new Date();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var time = hours + ":" + minutes;
+
+  if (minutes < 10) {
+    var minutes = "0" + minutes;
+  }
+  return time;
+}
 
 
 // Funzione ricerca
