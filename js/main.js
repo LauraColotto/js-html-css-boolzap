@@ -59,6 +59,14 @@ $(document).ready(function(){
     $(this).parents(".container-log").remove();
   });
 
+    // Funzione per chiudere il menù cliccando fuori dal Div
+    
+  $("body").click(function(e) {
+    if (e.target.id !== ".option-box"){
+      $(".option-box").hide();
+    }
+  });
+
 });
 
 
