@@ -273,6 +273,7 @@ width: 100%;
 }
 
 .container-log{
+  position: relative;
   display: flex;
   width: 100%;
   margin-bottom: 20px;
@@ -281,9 +282,11 @@ width: 100%;
 
 
 .log{
+
   min-width: 150px;
   max-width: 250px;
   min-height: 40px;
+  height: 100%;
   border-radius: 10px;
   padding: 10px;
   background: white;
@@ -292,8 +295,34 @@ width: 100%;
   box-shadow: 0px 4px 2px -3px rgba(0,0,0,0.22);
 }
 
-.log-text{
+
+.freccetta {
+  position: absolute;
+  display: none;
+  margin: 8px;
+  width: 20px;
   height: 100%;
+}
+
+.container-log:hover .freccetta{
+  display: block;
+}
+
+.option-box{
+  display: none;
+  position: absolute;
+  margin-top: 30px;
+  background-color: white;
+  width: 200px;
+  padding: 0px 10px;
+  -webkit-box-shadow: 0px 4px 2px -3px rgba(0,0,0,0.22);
+  -moz-box-shadow: 0px 4px 2px -3px rgba(0,0,0,0.22);
+  box-shadow: 0px 4px 2px -3px rgba(0,0,0,0.22);
+}
+
+.option-box li{
+    color: #999;
+    margin: 10px 0;
 }
 
 .user{

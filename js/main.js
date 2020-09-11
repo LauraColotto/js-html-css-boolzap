@@ -37,12 +37,24 @@ $(document).ready(function(){
   $(".contatto").click(
     function(){
       var rubrica = $(this).data("contatto");
+      var pcName = $(this).find(".contact-name h2").text();
+      var avatar = $(this).find(".avatar-rubrica img").attr("src");
       console.log(rubrica);
-
       mostraChat(rubrica);
+      $(".pc-avatar img").attr("src", avatar);
+      $(".pc-name h2").text(pcName);
     }
   )
 
+
+  // Elimina log
+  $(document).on("click", ".freccetta", function() {
+    $(this).next(".option-box").toggle();
+  });
+
+  $(document).on("click", ".delete", function(){
+    $(this).parents("container-log").remove();
+  })
 
 });
 
@@ -76,6 +88,8 @@ function sendMessage(){
   franco = setTimeout(function(){pcMessage()}, 3000);
 }
 
+
+
 // Funzione ricerca
 
 function search(str) {
@@ -103,8 +117,6 @@ function mostraChat(bl){
     } else if ($(this).hasClass("active")){
       $(this).removeClass("active");
     }
-  }
-
-  )
+  })
 
 }
