@@ -42,7 +42,7 @@ $(document).ready(function(){
       console.log(avatar);
       console.log(rubrica);
       mostraChat(rubrica);
-      $(".avatar-main img").attr("src", avatar);
+      $(".avatar-contatto img").attr("src", avatar);
       $(".pc-name h2").text(pcName);
     }
   )

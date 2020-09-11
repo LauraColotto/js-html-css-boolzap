@@ -107,6 +107,12 @@ main{
   border-radius: 100%;
 }
 
+.avatar-contatto{
+  overflow: hidden;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
 
 .header i{
   color: #b1b1b1;
