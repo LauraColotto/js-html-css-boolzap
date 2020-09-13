@@ -39,13 +39,12 @@ $(document).ready(function(){
       var rubrica = $(this).data("contatto");
       var pcName = $(this).find(".contact-name h2").text();
       var avatar = $(this).find("img").attr("src");
-      console.log(avatar);
-      console.log(rubrica);
       mostraChat(rubrica);
       $(".contatto-selected").removeClass("contatto-selected");
       $(this).addClass("contatto-selected");
       $(".avatar-contatto img").attr("src", avatar);
       $(".pc-name h2").text(pcName);
+
     }
   )
 
@@ -72,18 +71,35 @@ $(document).ready(function(){
 });
 
 
+
+
+
+
 // Funzione risposta messaggio
 
 function pcMessage(){
+
+
   var templateMessage = $(".template .container-log").clone();
   templateMessage.find(".log-text").text("Ammaccabanane");
   $(".active").append(templateMessage);
   templateMessage.find(".text-time").text(oraAttuale());
+  $(".contatto-selected").find(".time").text(oraAttuale());
+  $("#status").text("Ultimo accesso alle " + oraAttuale());
+
+  $(".contatto-selected").find("p").text("Ammaccabanane");
+  autoScroll()
 }
 
 
+// Funzione status pc
+
+function pcStatus(){
+  $("#status").text("Sta scrivendo...");
+  setTimeout(function(){pcMessage()}, 1000);
 
 
+}
 
 
 // Funzione d'invio messaggio
@@ -103,9 +119,12 @@ function sendMessage(){
 
     $(".active").append(templateMessage);
     $("#input-text").val("");
-  }
 
-  franco = setTimeout(function(){pcMessage()}, 1000);
+
+  }
+  autoScroll()
+  franco = setTimeout(function(){pcStatus()}, 1000);
+
 }
 
 
@@ -116,11 +135,12 @@ function oraAttuale(){
   var date = new Date();
   var hours = date.getHours();
   var minutes = date.getMinutes();
-  var time = hours + ":" + minutes;
-
   if (minutes < 10) {
     var minutes = "0" + minutes;
   }
+  var time = hours + ":" + minutes;
+
+
   return time;
 }
 
@@ -155,4 +175,11 @@ function mostraChat(bl){
   })
 
 
+}
+
+
+// Funzione di scroll automatico
+
+function autoScroll(){
+  $("container-chat").scrollTop(0);
 }
