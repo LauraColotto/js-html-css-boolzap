@@ -222,8 +222,12 @@ width: 100%;
 }
 
 
-.contatto-selezionato{
-  background-color: blue;
+.contatto-selected{
+  background-color: #d6d6d6;
+}
+
+.contatto:hover{
+  background-color: #f2f2f2;
 }
 
 /* Chat */
@@ -366,5 +370,9 @@ width: 100%;
 
 
 .send-message{
+  cursor: pointer;
+}
+
+.delete{
   cursor: pointer;
 }

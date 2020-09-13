@@ -42,6 +42,8 @@ $(document).ready(function(){
       console.log(avatar);
       console.log(rubrica);
       mostraChat(rubrica);
+      $(".contatto-selected").removeClass("contatto-selected");
+      $(this).addClass("contatto-selected");
       $(".avatar-contatto img").attr("src", avatar);
       $(".pc-name h2").text(pcName);
     }
@@ -60,7 +62,7 @@ $(document).ready(function(){
   });
 
     // Funzione per chiudere il menù cliccando fuori dal Div
-    
+
   $("body").click(function(e) {
     if (e.target.id !== ".option-box"){
       $(".option-box").hide();
@@ -78,6 +80,10 @@ function pcMessage(){
   $(".active").append(templateMessage);
   templateMessage.find(".text-time").text(oraAttuale());
 }
+
+
+
+
 
 
 // Funzione d'invio messaggio
