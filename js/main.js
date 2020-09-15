@@ -88,7 +88,7 @@ function pcMessage(){
   $("#status").text("Ultimo accesso alle " + oraAttuale());
 
   $(".contatto-selected").find("p").text("Ammaccabanane");
-  autoScroll()
+  autoScroll();
 }
 
 
@@ -122,7 +122,7 @@ function sendMessage(){
 
 
   }
-  autoScroll()
+  autoScroll();
   franco = setTimeout(function(){pcStatus()}, 1000);
 
 }
@@ -172,7 +172,7 @@ function mostraChat(bl){
     } else if ($(this).hasClass("active")){
       $(this).removeClass("active");
     }
-  })
+  });
 
 
 }
@@ -181,5 +181,5 @@ function mostraChat(bl){
 // Funzione di scroll automatico
 
 function autoScroll(){
-  $("container-chat").scrollTop(0);
+  $(".container-chat").scrollTop(1000);
 }
